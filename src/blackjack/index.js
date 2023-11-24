@@ -1,5 +1,5 @@
 import _ from "underscore";
-import { crearDeck, pedirCarta, valorCarta,turnoComputadora } from "../usecases";
+import { crearDeck, pedirCarta, valorCarta,turnoComputador,crearCartaHtml } from "../usecases";
 
 (() => {
   "use strict";
@@ -46,10 +46,7 @@ import { crearDeck, pedirCarta, valorCarta,turnoComputadora } from "../usecases"
     puntosHtml[0].innerText = puntosJugador;
     console.log(puntosJugador);
 
-    const imgCarta = document.createElement("img");
-    imgCarta.src = `assets/cartas/${carta}.png`;
-    divCartasJugador.append(imgCarta);
-    imgCarta.classList.add("carta");
+    const imgCarta = crearCartaHtml(carta)
 
     if (puntosJugador > 21) {
       // window.alert("Lo siento mucho,perdiste  Gana COMPUTADORA")
