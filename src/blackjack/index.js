@@ -1,5 +1,5 @@
 import _ from "underscore";
-import { crearDeck, pedirCarta, valorCarta,turnoComputador,crearCartaHtml } from "../usecases";
+import { crearDeck, pedirCarta, valorCarta,turnoComputadora,crearCartaHtml } from "../usecases";
 
 (() => {
   "use strict";
